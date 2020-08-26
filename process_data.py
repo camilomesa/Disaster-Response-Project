@@ -27,7 +27,7 @@ def clean_data(df):
     Args:
         df - data frame of the combined datasets of messages and categories
         
-    Returns: cleaned dataframe df (creates columns with corresponding names for categories data, converts catagory values to numbers 0 or 1, and drops duplicates)
+    Returns: cleaned dataframe df (creates columns with corresponding names for categories data,       converts catagory values to numbers 0 or 1, and drops duplicates)
     
     """
     
@@ -47,8 +47,11 @@ def clean_data(df):
         # convert column from string to numeric
         categories[column] = pd.to_numeric(categories[column])
     
-    #Some values in the "related" category column are equal to 2, so we will change them for 1:
+    #Some values in the "related" category column are equal to 2, so we will change them for 1
     categories.loc[categories['related']==2, 'related'] =1
+    
+    #The category 'child_alone' has only one value (0) so it can be deleted
+    categories.drop(columns = ['child_alone'], inplace = True)
     
     # drop the original categories column from `df`
     df.drop(['categories'], axis=1, inplace = True)
@@ -65,7 +68,8 @@ def save_data(df, database_filename):
     Args: dataframe df, and database_filename
     """
     engine = create_engine('sqlite:///DisasterResponse.db')
-    df.to_sql('MessagesWithCatTable', engine, index=False)
+    df.to_sql('Message', engine, if_exists='replace', index=False)
+    
 
 
 def main():
