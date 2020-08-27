@@ -46,7 +46,7 @@ def clean_data(df):
         categories[column] = categories[column].str[-1:]
         # convert column from string to numeric
         categories[column] = pd.to_numeric(categories[column])
-    
+        
     #Some values in the "related" category column are equal to 2, so we will change them for 1
     categories.loc[categories['related']==2, 'related'] =1
     
@@ -67,8 +67,8 @@ def save_data(df, database_filename):
     """Save the clean dataset into an sqlite database
     Args: dataframe df, and database_filename
     """
-    engine = create_engine('sqlite:///DisasterResponse.db')
-    df.to_sql('Message', engine, if_exists='replace', index=False)
+    engine = create_engine('sqlite:////home/workspace/data/DisasterResponse.db')
+    df.to_sql('Messages', engine, if_exists='replace', index=False)
     
 
 
