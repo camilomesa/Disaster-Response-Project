@@ -11,7 +11,7 @@ The README file includes how to run the Python scripts and web app Comments are 
 1. [Summary](#summary)
 2. [File Descriptions](#files)
 3. [Usage](#ussage)
-4. [Licensing, Authors, and Acknowledgments](#licensing)
+4. [Discussion on the model's performance and the traning data] (#discussion)
 
 
 ## Summary <a name="summary"></a>
@@ -74,5 +74,8 @@ Run the following commands in the project's root directory to set up your databa
 `python run.py`
 
 3. Go to http://0.0.0.0:3001/
+
+## Discussion on the model's performance and the traning data
+
 
 
