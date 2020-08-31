@@ -62,6 +62,7 @@ Run the following commands in the project's root directory to set up your databa
 `pip install --upgrade pip`
 
 1. To run ETL pipeline that cleans data and stores in database:
+
 `python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`
 
 2. To run ML pipeline that trains classifier and saves:
