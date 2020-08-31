@@ -83,10 +83,14 @@ Consider the message 'Flooding has reached historic levels and all boulder count
 
 The message is labeled as 'related' (related to a disaster), 'aid_related', 'flooding' all of which are accurate. However, it's not labeled as 'search_and_rescue' , 'infrastructure_related', 'weather_related' all of which are sound labels for the type of message entered.
 
+The model's class average precision is 0.74, its recall 0.45, and F1-score 0.51. For example, on the earthquake category the model performes relatively well with precision 0.89, recall 0.68, and F1-score 0.77.  Hence, 89% of the messages labeled by the model as related to earthquakes, were actually related to earthquakes. And, out of all messages related to earthquakes, the model correctly labeled 68% of them. There are categories with precision, recall and F1-scores all equal to zero because this category has a very low support and the tranining set is imbalanced.
 
-The model performs at ___ accuracy recall F1 score
-A K-neighbors model was implemented with results that were poorer
-The data is imbalanced (related cat), number of 
+Looking at the data more closely and using the following bar graphs, we note that the data there's a large number of messages in the training set that are don't belong to any of the categories. Moreover, the 'related' category contains high number of messages compared to other categories.
+
+
+
+In the exploratory phase of this project a K-neighbors model was implemented but the results were not better.
+
 
 
 
