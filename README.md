@@ -56,8 +56,8 @@ Here's the file structure of the project:
 Run the following commands in the project's root directory to set up your database and model.
 
 0. Update and/or synch the versions of python/packages execute:
-'pip3 install -U scikit-learn scipy matplotlib'
-'pip install --upgrade pip'
+`pip3 install -U scikit-learn scipy matplotlib`
+`pip install --upgrade pip`
 
 1. To run ETL pipeline that cleans data and stores in database:
 `python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`
