@@ -91,7 +91,7 @@ Looking at the data more closely and using the following bar graphs it's clear t
 
 ![alt text](frequency_messages_number_cats.png)
 
-After using GridSearch cross validation, the model's parameters were tuned in order to improve its performance. Moreover, in the exploratory phase of this project a K-neighbors model was considered but the results were not better. In a second phase of this project, we can consider techniques to balance the dataset such as over-sampling, down-sampling, or feature selection. 
+After using GridSearch cross validation, the model's parameters were tuned in order to improve its performance. Moreover, in the exploratory phase of this project a K-neighbors model was considered but the results significantly improve. In a second phase of this project, we can consider techniques to balance the dataset such as over-sampling, down-sampling, or feature selection. 
 
 
 
