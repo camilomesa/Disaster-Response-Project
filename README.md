@@ -5,14 +5,13 @@ This project implements a random forest classifier model to categorize messages 
 ![alt text](https://www.weather.gov/images/safety/ia-2008-2-lg.jpg) 
 
 
-The README file includes a summary of the project, how to run the Python scripts and web app, and an explanation of the files in the repository. Comments are used effectively and each function has a docstring.
+The README file includes how to run the Python scripts and web app Comments are used effectively and each function has a docstring.
 
 ### Table of contents
 1. [Summary](#summary)
-2. [Project Motivation](#motivation)
-3. [File Descriptions](#files)
-4. [Results](#results)
-5. [Licensing, Authors, and Acknowledgments](#licensing)
+2. [File Descriptions](#files)
+3. [Usage](#ussage)
+4. [Licensing, Authors, and Acknowledgments](#licensing)
 
 
 ## Summary <a name="summary"></a>
@@ -50,3 +49,25 @@ Here's the file structure of the project:
 - notebooks (jupyter notebooks used to develop the source code of the ETL, machine learning pipelines and web application
 
 - README.md
+
+
+## Usage
+
+Run the following commands in the project's root directory to set up your database and model.
+
+0. Update and/or synch the versions of python/packages execute:
+'pip3 install -U scikit-learn scipy matplotlib'
+'pip install --upgrade pip'
+
+1. To run ETL pipeline that cleans data and stores in database:
+`python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`
+
+2. To run ML pipeline that trains classifier and saves
+`python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl`
+
+2. Run the following command in the app's directory to run your web app.
+    `python run.py`
+
+3. Go to http://0.0.0.0:3001/
+
+
