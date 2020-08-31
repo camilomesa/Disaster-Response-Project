@@ -33,18 +33,18 @@ The main components of the project are the following:
 Here's the file structure of the project:
 - app
   - template
-   * master.html (main page of web app)
-   * go.html  (classification result page of web app)
+    * master.html (main page of web app)
+    * go.html  (classification result page of web app)
   - run.py  (flask file that runs app)
 
 - data
- - disaster_categories.csv  (data to process)
- - disaster_messages.csv  (data to process)
- - process_data.py (ETL script)
- - InsertDatabaseName.db   # database to save clean data to
+  - disaster_categories.csv  (data to process)
+  - disaster_messages.csv  (data to process)
+  - process_data.py (ETL script)
+  - DisasterResponse.db (database with clean data)
 
 - models
-|- train_classifier.py
-|- classifier.pkl  # saved model 
+  - train_classifier.py (natural language processing pipeline script)
+  - classifier.pkl (saved model)
 
 - README.md
