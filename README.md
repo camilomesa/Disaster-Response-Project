@@ -10,8 +10,8 @@ The README file includes how to run the Python scripts and web app Comments are 
 ### Table of contents
 1. [Summary](#summary)
 2. [File Descriptions](#files)
-3. [Usage](#ussage)
-4. [Discussion on the model's performance and the traning data] (#discussion)
+3. [Usage](#usage)
+4. [Discussion on the model's performance and the traning data](#discussion)
 
 
 ## Summary <a name="summary"></a>
@@ -51,7 +51,7 @@ Here's the file structure of the project:
 - README.md
 
 
-## Usage
+## Usage <a name="usage"></a>
 
 Run the following commands in the project's root directory to set up your database and model.
 
@@ -75,7 +75,17 @@ Run the following commands in the project's root directory to set up your databa
 
 3. Go to http://0.0.0.0:3001/
 
-## Discussion on the model's performance and the traning data
+## Discussion on the model's performance and the traning data <a name="discussion"></a>
+
+Consider the message 'Flooding has reached historic levels and all boulder county roads are closed. We need evacuation teams'. Below we see the model's output for this message.
+
+![alt text](message_example.png) 
+
+
+
+The model performs at ___ accuracy recall F1 score
+A K-neighbors model was implemented with results that were poorer
+The data is imbalanced (related cat), number of 
 
 
 
