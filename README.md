@@ -87,9 +87,9 @@ The model's class average precision is 0.74, its recall 0.45, and F1-score 0.51.
 
 Looking at the data more closely and using the following bar graphs it's clear that our dataset is imbalanced. Note that the there's a large number of messages in the training set that don't belong to any of the categories. Moreover, the 'related' category contains high number of messages compared to other categories.
 
-![alt text](distribution_by_cat.png) 
+![alt text](distribution by cat.png) 
 
-![alt text](frequency_of_messages_by_number_of_cats.png)
+![alt text](frequency of messages by number of cats.png)
 
 After using GridSearch cross validation, the model's parameters were tuned in order to improve its performance. Moreover, in the exploratory phase of this project a K-neighbors model was considered but the results were not better. In a second phase of this project, we can consider techniques to balance the dataset such as over-sampling, down-sampling, or feature selection. 
 
