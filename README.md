@@ -58,6 +58,7 @@ Run the following commands in the project's root directory to set up your databa
 0. Update and/or synch the versions of python/packages execute:
 
 `pip3 install -U scikit-learn scipy matplotlib`
+
 `pip install --upgrade pip`
 
 1. To run ETL pipeline that cleans data and stores in database:
