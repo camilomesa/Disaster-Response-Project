@@ -1,5 +1,5 @@
 # Disaster Response Project
-This project implements a random forest classifier model to categorize messages sent by people during natural disasters. After classification, the messages can be directed to the appropriate disaster relief agency. The training data provided by [Figure Eight](https://appen.com/) was mined using ETL and NLP pipelines.
+This project implements a random forest classifier model to categorize messages sent by people during natural disasters. After classification, the messages can be directed to the appropriate disaster relief agency. The training data provided by [Figure Eight](https://appen.com/) was mined using ETL and natural language processing pipelines.
 
 
 ![alt text](https://www.weather.gov/images/safety/ia-2008-2-lg.jpg) 
@@ -23,7 +23,7 @@ The data consists of messages from social media, news or disaster response organ
 The main components of the project are the following:
 - ETL Pipeline: Loads the messages and categories datasets, cleans the data, and stores it in a SQLite database
 - ML Pipeline: Loads data from the SQLite database, splits the dataset into training and test sets, builds a text processing pipeline, trains and tunes a model using GridSearchCV, outputs results on the test set, exports the final model as a pickle file
-- Flask Web App: Displays the results and implements the machine learning model to classify new messages provided by the user. An statistical visualization of the training dataset is provided as well.
+- Flask Web App: Displays the results and implements the machine learning model to classify new messages provided by the user. A statistical visualization of the training dataset is provided as well.
 
 
 
