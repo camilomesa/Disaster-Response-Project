@@ -1,47 +1,31 @@
 # Disaster Response Project
-This project implements a random forest classifier model to label peoples messages by disaster category. The training data provided by [Figure Eight](https://appen.com/) was mined using ETL and NLP pipelines.
+This project implements a random forest classifier model to categorize messages sent by people during natural disasters. After classification, the messages can be directed to the appropriate disaster relief agency. The training data provided by [Figure Eight](https://appen.com/) was mined using ETL and NLP pipelines.
 
 
 ![alt text](https://www.weather.gov/images/safety/ia-2008-2-lg.jpg) 
 
+
+The README file includes a summary of the project, how to run the Python scripts and web app, and an explanation of the files in the repository. Comments are used effectively and each function has a docstring.
+
 ### Table of contents
-1. [Installation](#installation)
+1. [Summary](#summary)
 2. [Project Motivation](#motivation)
 3. [File Descriptions](#files)
 4. [Results](#results)
 5. [Licensing, Authors, and Acknowledgments](#licensing)
 
 
-## Installation <a name="installation"></a>
-This project was written using the Anaconda distribution of Python. The code should run with no issues using Python versions 3.* after installing the following:
+## Summary <a name="summary"></a>
 
-**Pip Install:** json, plotly, pandas, joblib, flask, scikit-learn, scipy, matplotlib
+In this project we analyze disaster data from [Figure Eight](https://appen.com/) to build a model for an API that classifies disaster messages. 
+The data consists of messages from social media, news or disaster response organizations and their corresponding classes (e.g. earthquake, fire, etc.).
 
-from operator import add
-import numpy as np
+The main components of the project are the following:
+- ETL Pipeline: Loads the messages and categories datasets, cleans the data, and stores it in a SQLite database
+- ML Pipeline: Loads data from the SQLite database, splits the dataset into training and test sets, builds a text processing pipeline, trains and tunes a model using GridSearchCV, outputs results on the test set, exports the final model as a pickle file
+- Flask Web App: Displays the results and implements the machine learning model to classify new messages provided by the user. An statistical visualization of the training dataset is provided as well.
 
 
-from nltk.stem import WordNetLemmatizer
-from nltk.tokenize import word_tokenize
-
-from flask import Flask
-from flask import render_template, request, jsonify
-from plotly.graph_objs import Bar
-from sqlalchemy import create_engine
-
-import sys
-import pickle
-from sklearn.metrics import classification_report
-from sklearn.base import BaseEstimator, TransformerMixin
-from sklearn.model_selection import train_test_split
-import nltk
-nltk.download(['punkt', 'wordnet', 'averaged_perceptron_tagger'])
-import re
-from sklearn.pipeline import Pipeline, FeatureUnion
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.multioutput import MultiOutputClassifier
-from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
-from sklearn.model_selection import GridSearchCV
 
 
 ## File Descriptions<a name="files"></a>
