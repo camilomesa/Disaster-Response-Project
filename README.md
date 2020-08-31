@@ -43,7 +43,7 @@ Here's the file structure of the project:
   - train_classifier.py (natural language processing pipeline script)
   - classifier.pkl (saved model)
 
-- notebooks (jupyter notebooks used to develop the source code of the ETL, machine learning pipelines and web application
+- notebooks (jupyter notebooks used to develop the source code of the ETL, machine learning pipelines and web application)
 
 - README.md
 
