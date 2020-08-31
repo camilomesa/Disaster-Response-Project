@@ -81,6 +81,7 @@ Consider the message 'Flooding has reached historic levels and all boulder count
 
 ![alt text](message_example.png) 
 
+The message is labeled as 'related' (related to a disaster), 'aid_related', 'flooding' all of which are accurate. However, it's not labeled as 'search_and_rescue' , 'infrastructure_related', 'weather_related' all of which are sound labels for the type of message entered.
 
 
 The model performs at ___ accuracy recall F1 score
