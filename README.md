@@ -2,7 +2,7 @@
 This project implements a random forest classifier model to categorize messages sent by people during natural disasters. After classification, the messages can be directed to the appropriate disaster relief agency. The training data provided by [Figure Eight](https://appen.com/) was mined using ETL and natural language processing pipelines.
 
 
-![alt text](https://www.weather.gov/images/safety/ia-2008-2-lg.jpg) 
+![Source: weather.gov](https://www.weather.gov/images/safety/ia-2008-2-lg.jpg) 
 
 
 The README file includes how to run the Python scripts and web app Comments are used effectively and each function has a docstring.
