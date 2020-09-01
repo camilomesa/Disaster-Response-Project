@@ -38,6 +38,8 @@ def tokenize(text):
     Args: text (messages)
     Returns: clean_tokens (list of tokens)
     """
+    # remove special characters and lowercase
+    text = re.sub(r"[^a-zA-Z0-9]", " ", text.lower())
     tokens = word_tokenize(text)
     lemmatizer = WordNetLemmatizer()
 
@@ -113,19 +115,21 @@ def train(X, Y, model):
     
     # fit model
     model = model.fit(X_train, Y_train)
-    Y_pred = model.predict(X_test)
     
-    #format Y_pred to match the format of Y_test
-    index = [str(x) for x in list(Y_test.index)]
-    category_names = list(Y.columns)
-    Y_pred = pd.DataFrame(Y_pred, index = index , columns = category_names )
     
-    # output model test results
-    print('Evaluating model...')
-    print(classification_report(Y_test, Y_pred, zero_division = 0, target_names= category_names))
     print("\nBest Parameters:", model.best_params_)
     
     return model
+
+def evaluate_model(model, X_text, Y_test, category_names):
+    #compute predicitions on test set
+     Y_pred = model.predict(X_test)
+    
+    #format Y_pred to match the format of Y_test
+    index = [str(x) for x in list(Y_test.index)]
+    category_names = list(Y_test.columns)
+    Y_pred = pd.DataFrame(Y_pred, index = index , columns = category_names )
+    print(classification_report(Y_test, Y_pred, zero_division = 0, target_names= category_names))
 
 def export_model(model, pickle_filepath):
     # Export model as a pickle file
@@ -143,6 +147,9 @@ def main():
         
         print('Training model...')
         model = train(X, Y, model)
+        
+        print('Evaluating model....')
+        evaluate_model(model, X_text, Y_test, category_names)
         
         print('Saving model...\n    MODEL: {}'.format(pickle_filepath))
         export_model(model, pickle_filepath)
