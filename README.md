@@ -9,6 +9,7 @@ This project implements a random forest classifier model to categorize messages 
 2. [File Descriptions](#files)
 3. [Usage](#usage)
 4. [Discussion on the model's performance and the training data](#discussion)
+5. [Lincensing, authors, and acknowledgements](#licen)
 
 
 ## Summary <a name="summary"></a>
@@ -91,7 +92,8 @@ Looking at the data more closely and using the following bar graphs, it's clear 
 After using GridSearch cross-validation, the model's parameters were tuned to improve its performance. Moreover, in this project's exploratory phase, a K-neighbors model was considered, but the results did not significantly improve. In a revision phase of this project, we can consider techniques to balance the dataset such as over-sampling, down-sampling, or feature selection. 
 
 
-
+## Lincensing, authors, and acknowledgements  <a name="licen"></a>
+The data files were provided to ucacity.com by the company Figure-eight. 
 
 
 
