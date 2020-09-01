@@ -67,7 +67,7 @@ def save_data(df, database_filename):
     """Save the clean dataset into an sqlite database
     Args: dataframe df, and database_filename
     """
-    engine = create_engine('sqlite:////home/workspace/data/DisasterResponse.db')
+    engine = create_engine('sqlite:///'+database_filename)
     df.to_sql('Messages', engine, if_exists='replace', index=False)
     
 
